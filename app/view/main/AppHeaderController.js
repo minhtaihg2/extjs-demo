@@ -21,15 +21,12 @@ Ext.define('MyApp.view.main.AppHeaderController', {
 
   onClickButton: function (button) {
     var form = button.ownerCt.ownerCt;
-    this.onLogoutSuccess(form);
+    this.onLogoutSuccess(form,this);
   },
-  onLogoutSuccess: function(form) {
-
+  onLogoutSuccess: function(form,_me) {
+    //form.close();
     localStorage.removeItem('TutorialLoggedIn');
-    form.close();
-    Ext.create({
-      xtype: 'login'
-    });
+    window.location = '';
   },
   onLogoutInForm: function (button) {
     console.log('logout :', true);

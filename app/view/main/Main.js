@@ -9,6 +9,17 @@ Ext.define('MyApp.view.main.Main', {
     'MyApp.view.main.AppHeader',
     'Ext.plugin.Viewport'
   ],
+
+
+  /*router : {
+    'login' : 'onHome'
+  },
+  onHome : function() {
+    console.log('onHome go :',true);
+    this.redirectTo('login');
+  },*/
+
+
   layout: 'border',
   bodyBorder: false,
   controller : 'main',
