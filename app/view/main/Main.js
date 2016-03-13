@@ -3,10 +3,11 @@
  */
 Ext.define('MyApp.view.main.Main', {
   extend: 'Ext.panel.Panel',
-  xtype: 'layout-border',
+  xtype: 'app-main',
   requires: [
     'Ext.layout.container.Border',
     'MyApp.view.main.AppHeader',
+    'Ext.plugin.Viewport'
   ],
   layout: 'border',
   bodyBorder: false,
@@ -16,6 +17,7 @@ Ext.define('MyApp.view.main.Main', {
     split: true,
     bodyPadding: 10
   },
+  plugins: 'viewport',
   header : {
     height : 45,
     xtype: 'appHeader',

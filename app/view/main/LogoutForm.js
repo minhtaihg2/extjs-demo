@@ -18,7 +18,7 @@ Ext.define('MyApp.view.main.LogoutForm', {
     buttons: [
         { 
             text:'Yes',
-            handler: 'onLogoutInForm',
+            handler: 'onClickButton',
         }, { 
             text:'No',
             handler: 'onClose' 

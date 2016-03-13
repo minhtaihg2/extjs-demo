@@ -86,7 +86,7 @@ Ext.define('MyApp.view.main.AppHeader', {
   }],
 
   initComponent: function () {
-    document.title = this.title;
+    document.title = 'My application';
     this.callParent();
   }
 });
