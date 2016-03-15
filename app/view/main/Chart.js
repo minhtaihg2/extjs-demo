@@ -2,16 +2,24 @@ Ext.define('MyApp.view.main.Chart', {
     extend: 'Ext.Panel',
     xtype: 'column-basic-3d',
     controller: 'chart',
-    require : [
-        'MyApp.store.Chart'
+    require: [
+        'MyApp.store.Chart',
+        'MyApp.view.main.List'
     ],
 
-    width: 450,
-
+    layout: 'column',
+    viewModel: true,
+    defaults: {
+        bodyPadding: 10
+    },
     items: [{
+        xtype: 'mainlist',
+        height: 450,
+        columnWidth: 0.5
+    }, {
         xtype: 'cartesian',
         reference: 'chart',
-        width: '50%',
+        columnWidth: 0.5,
         height: 500,
         insetPadding: 40,
         flipXY: true,

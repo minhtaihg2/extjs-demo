@@ -2,7 +2,8 @@ Ext.define('MyApp.view.main.Tabs', {
     extend: 'Ext.tab.Panel',
     requires: [
         'Ext.layout.container.Card',
-        'MyApp.view.main.Chart'
+        'MyApp.view.main.Chart',
+        'MyApp.view.main.List'
     ],
     xtype: 'layout-cardtabs',
     style: 'background-color:#dfe8f6; ',
@@ -16,7 +17,7 @@ Ext.define('MyApp.view.main.Tabs', {
         },
         {
             title: 'Thống kê tuần',
-            html: 'This is tab 2 content.'
+            xtype : 'mainlist'
         },
         {
             title: 'Thống kê tháng',

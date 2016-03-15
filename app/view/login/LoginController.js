@@ -35,6 +35,7 @@ Ext.define('MyApp.view.login.LoginController', {
 
         localStorage.setItem("TutorialLoggedIn", true);
         localStorage.setItem("user", result.data.email);
+        localStorage.setItem("token", result.data.token);
 
         //sessionStorage.setItem("isClientLogined", true);
         Ext.callback(options.success, options.scope, [options.data.userCode, options.data.password]);
