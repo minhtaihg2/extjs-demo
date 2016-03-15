@@ -10,7 +10,6 @@ Ext.define('MyApp.view.main.Main', {
         'Ext.plugin.Viewport'
     ],
 
-
     /*router : {
      'login' : 'onHome'
      },

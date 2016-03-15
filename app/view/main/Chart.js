@@ -10,11 +10,10 @@ Ext.define('MyApp.view.main.Chart', {
     layout: 'column',
     viewModel: true,
     defaults: {
-        bodyPadding: 10
     },
     items: [{
         xtype: 'mainlist',
-        height: 450,
+        height: 500,
         columnWidth: 0.5
     }, {
         xtype: 'cartesian',
