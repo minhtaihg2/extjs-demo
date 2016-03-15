@@ -38,5 +38,5 @@ Ext.define('MyApp.view.main.AppHeaderController', {
   onClose: function (button) {
     var win = button.ownerCt.ownerCt.ownerCt;
     win.close();
-  },
+  }
 });

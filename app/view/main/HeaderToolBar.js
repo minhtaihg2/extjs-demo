@@ -32,10 +32,10 @@ Ext.define('MyApp.view.main.HeaderToolBar', {
         text: 'Info',
         iconCls: 'fa fa-info-circle'
     }, {
-        text: 'Hello Harvey ',
+        text: localStorage.getItem("user"),
         iconCls: 'fa fa-user',
         menu: [{
-            text: 'User',
+            text: 'Logout',
             iconCls: 'fa fa-sign-out',
             listeners: {
                 click: 'onLogout'
@@ -48,7 +48,7 @@ Ext.define('MyApp.view.main.HeaderToolBar', {
             iconCls: 'fa fa-info'
         }, {
             text: 'My dashboard',
-            iconCls: 'fa fa-smile-o',
+            iconCls: 'fa fa-smile-o'
         }]
     }]
 });

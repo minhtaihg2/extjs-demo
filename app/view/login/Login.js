@@ -9,7 +9,7 @@ Ext.define('MyApp.view.login.Login', {
 
   controller: 'login',
   bodyPadding: 10,
-  title: 'Login Window',
+  title: 'Đăng nhập hệ thống',
   closable: false,
   autoShow: true,
 
@@ -18,8 +18,8 @@ Ext.define('MyApp.view.login.Login', {
     reference: 'form',
     items: [{
       xtype: 'textfield',
-      name: 'username',
-      fieldLabel: 'Username',
+      name: 'email',
+      fieldLabel: 'Email',
       allowBlank: false
     }, {
       xtype: 'textfield',
