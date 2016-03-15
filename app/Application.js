@@ -12,7 +12,8 @@ Ext.define('MyApp.Application', {
   ],
   requires: [
     'MyApp.view.main.AppHeader',
-    'MyApp.view.main.HeaderToolBar'
+    'MyApp.view.main.HeaderToolBar',
+    'MyApp.AppConfig'
   ],
   views: [
     'MyApp.view.login.Login',
@@ -25,7 +26,7 @@ Ext.define('MyApp.Application', {
 
     // Check to see the current value of the localStorage key
     loggedIn = localStorage.getItem("TutorialLoggedIn");
-    console.log('loggedIn :', loggedIn);
+
     // This ternary operator determines the value of the TutorialLoggedIn key.
     // If TutorialLoggedIn isn't true, we display the login window,
     // otherwise, we display the main view

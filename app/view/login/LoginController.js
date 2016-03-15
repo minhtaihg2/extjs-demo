@@ -15,8 +15,7 @@ Ext.define('MyApp.view.login.LoginController', {
   },
   login: function(options) {
     Ext.Ajax.request({
-      //url: 'http://192.168.1.87/giochaAPI/public/api/authenticate',
-      url: 'http://192.168.1.87/ypc571/public/v1/auth/login',
+      url: MyApp.AppConfig.api.ApiUrlLogin,
       method: 'POST',
       params: options.data,
       scope: this,
