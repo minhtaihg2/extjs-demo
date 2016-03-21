@@ -45,3 +45,8 @@ Ext.define('MyApp.Application', {
     );
   }
 });
+Ext.Ajax.defaultHeaders = {
+    'Accept' : 'application/json',
+    'Content-Type' : 'application/json',
+    'Authorization': 'Bearer ' + localStorage.getItem('token')
+};

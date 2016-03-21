@@ -4,7 +4,8 @@ Ext.define('MyApp.view.main.Chart', {
     controller: 'chart',
     require: [
         'MyApp.store.Chart',
-        'MyApp.view.main.List'
+        'MyApp.view.main.List',
+        'MyApp.view.main.Client'
     ],
 
     layout: 'column',
@@ -12,7 +13,7 @@ Ext.define('MyApp.view.main.Chart', {
     defaults: {
     },
     items: [{
-        xtype: 'mainlist',
+        xtype: 'list-client',
         height: 500,
         columnWidth: 0.5
     }, {
