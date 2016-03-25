@@ -16,10 +16,12 @@ Ext.define('MyApp.view.main.Client', {
     },
 
     columns: [
-        { text: 'ID',  dataIndex: 'id' }
-    ],
-
-    listeners: {
+        {header: 'ID', dataIndex: 'id', flex: 1},
+        {header: 'Email', dataIndex: 'email', flex: 2},
+        {header: 'FirstName', dataIndex: 'firstName', flex: 1},
+        {header: 'LastName', dataIndex: 'lastName', flex: 1}
+    ]
+    /* listeners: {
         select: 'onItemSelected'
-    }
+    }*/
 });

@@ -2,6 +2,6 @@
 Ext.define('MyApp.model.Client',{
     extend : 'Ext.data.Model',
     fields : [
-        'id'
+        'id','email','firstName','lastName'
     ]
 });
