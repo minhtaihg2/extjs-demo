@@ -6,11 +6,13 @@ Ext.define('MyApp.view.main.Client', {
     xtype: 'list-client',
 
     requires: [
-        'MyApp.store.Client'
+        'MyApp.store.Client',
+        'MyApp.view.form.WindowClientEdit',
+        'MyApp.view.main.ClientController'
     ],
 
     title: 'Khách hàng',
-
+    controller : 'client',
     store: {
         type: 'store-client'
     },
@@ -20,8 +22,8 @@ Ext.define('MyApp.view.main.Client', {
         {header: 'Email', dataIndex: 'email', flex: 2},
         {header: 'FirstName', dataIndex: 'firstName', flex: 1},
         {header: 'LastName', dataIndex: 'lastName', flex: 1}
-    ]
-    /* listeners: {
-        select: 'onItemSelected'
-    }*/
+    ],
+     listeners: {
+        select: 'onItemSelectedEdit'
+    }
 });

@@ -14,7 +14,6 @@ Ext.define('MyApp.view.main.Chart', {
     },
     items: [{
         xtype: 'list-client',
-        height: 500,
         columnWidth: 0.5
     }, {
         xtype: 'cartesian',
