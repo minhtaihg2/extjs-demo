@@ -7,7 +7,34 @@ Ext.define('MyApp.view.main.Chart', {
         'MyApp.view.main.List',
         'MyApp.view.main.Client'
     ],
-
+    tbar: {
+        items: [{
+            xtype: 'button',
+            text: 'Add client',
+          /*  iconCls: 'button-home-medium',
+            scale: 'medium',*/
+            iconCls: 'fa fa-plus',
+            listeners: {
+                click: 'onAddButtonClick'
+            }
+        },
+            {
+                xtype: 'button',
+                text: 'Add item',
+                iconCls: 'fa fa-plus',
+                listeners: {
+                    click: 'onAddButtonClick'
+                }
+            },
+            {
+                xtype: 'button',
+                iconCls: 'fa fa-plus',
+                text: 'Add ticket',
+                listeners: {
+                    click: 'onAddButtonClick'
+                }
+            }]
+    },
     layout: 'column',
     viewModel: true,
     defaults: {
@@ -86,11 +113,5 @@ Ext.define('MyApp.view.main.Chart', {
         }]
     }],
 
-    tbar: [
-        '->',
-        {
-            text: 'Preview',
-            handler: 'onPreview'
-        }
-    ]
+
 });

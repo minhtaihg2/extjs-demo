@@ -6,7 +6,7 @@ Ext.define('MyApp.view.form.WindowClientEdit', {
 
     title: 'Edit client',
     width: 400,
-    height: 500,
+    height: 550,
     minWidth: 300,
     minHeight: 380,
     resizable: true,
@@ -63,6 +63,7 @@ Ext.define('MyApp.view.form.WindowClientEdit', {
             }]
         }, {
             xtype: 'textfield',
+            name : 'email',
             fieldLabel: 'Your Email Address',
             afterLabelTextTpl: [
                 '<span style="color:red;font-weight:bold" data-qtip="Required">*</span>'
@@ -71,29 +72,34 @@ Ext.define('MyApp.view.form.WindowClientEdit', {
             allowBlank: false
         }, {
             xtype: 'textfield',
-            fieldLabel: 'Branch',
-            afterLabelTextTpl: [
-                '<span style="color:red;font-weight:bold" data-qtip="Required">*</span>'
-            ],
-            allowBlank: false
+            fieldLabel: 'Note',
+            name : 'notes',
+            allowBlank: true
         }, {
             xtype: 'textareafield',
-            fieldLabel: 'Mobile',
+            fieldLabel: 'Profile Details',
+            name : 'profileDetails',
             labelAlign: 'top',
             flex: 1,
             margin: '0',
-            afterLabelTextTpl: [
-                '<span style="color:red;font-weight:bold" data-qtip="Required">*</span>'
-            ],
-            allowBlank: false
+            allowBlank: true
+        },{
+            xtype: 'textfield',
+            fieldLabel: 'Id',
+            name : 'id',
+            labelAlign: 'top',
+            flex: 1,
+            margin: '0',
+            allowBlank: true
         }],
 
-        buttons: [{
+        buttons: [
+            {
+                text: 'Update',
+                handler: 'onFormSubmit'
+            },{
             text: 'Cancel',
             handler: 'onFormCancel'
-        }, {
-            text: 'Send',
-            handler: 'onFormSubmit'
-        }]
+        } ]
     }]
 });

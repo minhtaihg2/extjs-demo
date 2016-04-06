@@ -42,7 +42,7 @@ Ext.define('MyApp.view.main.Main', {
             width: 245,
             minWidth: 100,
             maxWidth: 250,
-            html: '<p>Secondary content like navigation links could go here</p>'
+            html: '<p>Updating....</p>'
         },
         {
             title: 'Main Content',

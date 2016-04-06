@@ -16,7 +16,6 @@ Ext.define('MyApp.view.main.Client', {
     store: {
         type: 'store-client'
     },
-
     columns: [
         {header: 'ID', dataIndex: 'id', flex: 1},
         {header: 'Email', dataIndex: 'email', flex: 2},
