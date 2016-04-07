@@ -32,6 +32,9 @@ Ext.define('MyApp.view.main.ChartController', {
     onPreview: function () {
         var chart = this.lookupReference('chart');
         chart.preview();
+    },
+    createClient: function () {
+        this.redirectTo('client/new');
     }
 
 });

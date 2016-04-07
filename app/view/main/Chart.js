@@ -3,9 +3,8 @@ Ext.define('MyApp.view.main.Chart', {
     xtype: 'column-basic-3d',
     controller: 'chart',
     require: [
-        'MyApp.store.Chart',
-        'MyApp.view.main.List',
-        'MyApp.view.main.Client'
+        'MyApp.store.*',
+        'MyApp.view.*'
     ],
     tbar: {
         items: [{
@@ -15,7 +14,7 @@ Ext.define('MyApp.view.main.Chart', {
             scale: 'medium',*/
             iconCls: 'fa fa-plus',
             listeners: {
-                click: 'onAddButtonClick'
+                click: 'createClient'
             }
         },
             {
@@ -39,9 +38,11 @@ Ext.define('MyApp.view.main.Chart', {
     viewModel: true,
     defaults: {
     },
+    //form-register
     items: [{
         xtype: 'list-client',
-        columnWidth: 0.5
+        columnWidth: 0.5,
+        height : 520
     }, {
         xtype: 'cartesian',
         reference: 'chart',

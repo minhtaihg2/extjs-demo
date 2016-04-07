@@ -12,7 +12,9 @@ Ext.define('MyApp.view.main.MainController', {
     onItemSelected: function (sender, record) {
         Ext.Msg.confirm('Confirm', 'Are you sure?', 'onConfirm', this);
     },
-
+    router: {
+        'client/new': 'createClient'
+    },
     onConfirm: function (choice) {
         if (choice === 'yes') {
             //

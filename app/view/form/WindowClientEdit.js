@@ -6,7 +6,7 @@ Ext.define('MyApp.view.form.WindowClientEdit', {
 
     title: 'Edit client',
     width: 400,
-    height: 550,
+    height: 420,
     minWidth: 300,
     minHeight: 380,
     resizable: true,
@@ -71,11 +71,6 @@ Ext.define('MyApp.view.form.WindowClientEdit', {
             vtype: 'email',
             allowBlank: false
         }, {
-            xtype: 'textfield',
-            fieldLabel: 'Note',
-            name : 'notes',
-            allowBlank: true
-        }, {
             xtype: 'textareafield',
             fieldLabel: 'Profile Details',
             name : 'profileDetails',
@@ -84,7 +79,7 @@ Ext.define('MyApp.view.form.WindowClientEdit', {
             margin: '0',
             allowBlank: true
         },{
-            xtype: 'textfield',
+            xtype: 'hidden',
             fieldLabel: 'Id',
             name : 'id',
             labelAlign: 'top',

@@ -29,11 +29,11 @@ Ext.define('MyApp.view.main.ClientController', {
     onFormSubmit: function() {
         var formPanel = this.lookupReference('windowForm'),
             form = formPanel.getForm();
-        console.log('form :', form.getValues());
         if (form.isValid()) {
             // In a real application, this would submit the form to the configured url
             // form.submit();
             var _me = this;
+            console.log('form :', form.getValues());
             Ext.Ajax.request({
                 headers: {
                     'Content-Type': 'application/json',
@@ -42,11 +42,11 @@ Ext.define('MyApp.view.main.ClientController', {
                 },
                 url: MyApp.AppConfig.api.ApiClient + '/' + form.getValues().id,
                 method: 'PUT',
-                params: form.getValues(),
+                params: Ext.JSON.encode(form.getValues()),
                 scope: this,
                 callback: function(options, success, response){
                     if (success) {
-                        console.log('success :', success);
+                        console.log('success :', success,response);
                         form.reset();
                         _me.lookupReference('popupWindow').hide();
                         Ext.MessageBox.alert(
